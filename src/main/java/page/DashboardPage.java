@@ -11,8 +11,8 @@ public class DashboardPage extends BasePage {
 	public DashboardPage(WebDriver driver) {
 		this.driver=driver;
 	}
-	@FindBy(how=How.XPATH,using="/html/body/div[1]/section/div/div[2]/div/div/header/div/string") WebElement dashboardHeaderElement;
-	@FindBy(how=How.XPATH,using="/html/body/div[1]/aside[1]/div/nav/ul[2]/li[2]/a/span") WebElement customerButtonElement;
+	@FindBy(how=How.XPATH,using="//strong[text()='Dashboard']") WebElement dashboardHeaderElement;
+	@FindBy(how=How.XPATH,using="//span[text()='Customers']") WebElement customerButtonElement;
 	@FindBy(how=How.XPATH,using="//span[text()='Add Customer']") WebElement addCustomerButtonElement;
 	
 	
