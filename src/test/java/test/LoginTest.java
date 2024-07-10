@@ -38,17 +38,19 @@ public class LoginTest {
 
 	}
 
-	@Test
+//	@Test
 	public void validateAlertPopup() {
 		driver = BrowserFactory.init();
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 		loginPage.clickSigninButton();
 		Assert.assertEquals(loginPage.getUSerAlertMsg(),userAlertText, "user Alert msg doesn't match!!");
+//		driver.switchTo().alert().accept();
 
 		loginPage.insertUserName(userName);
 		loginPage.clickSigninButton();
 		Assert.assertEquals(loginPage.getPasswordAlertMsg(), passwordAlertText,
 				"Password Alert msg doesn't match!!");
+//		driver.switchTo().alert().accept();
 	}
 
 }

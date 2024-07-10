@@ -30,6 +30,7 @@ public class LoginPage extends BasePage {
 	}
 	public String getUSerAlertMsg() {
 		String actualUserAlertMag = driver.switchTo().alert().getText();
+		System.out.println("actual masg= "+actualUserAlertMag);
 		driver.switchTo().alert().accept();
 		return actualUserAlertMag;
 	}
