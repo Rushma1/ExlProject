@@ -29,7 +29,8 @@ public class AddCustomerTest {
 	String city = exlread.getCellData("AddContactInfo", "City", 2);
 	String zip = exlread.getCellData("AddContactInfo", "Zip", 2);
 	String country = exlread.getCellData("AddContactInfo", "Country", 2);
-	String group = exlread.getCellData("AddContactInfo", "Group", 2);
+	//String group = exlread.getCellData("AddContactInfo", "Group", 2);
+	String group="Selenium";
 
 	@Test
 	public void userShouldBeAbleToCreateNewCustomer() {
@@ -60,6 +61,7 @@ public class AddCustomerTest {
 		addCustomerPage.insertZip(zip);
 		addCustomerPage.selectCountry(country);
 		addCustomerPage.selectgroup(group);
+		addCustomerPage.clickSaveButton();
 
 	}
 

@@ -13,7 +13,7 @@ public class DashboardPage extends BasePage {
 	}
 	@FindBy(how=How.XPATH,using="/html/body/div[1]/section/div/div[2]/div/div/header/div/string") WebElement dashboardHeaderElement;
 	@FindBy(how=How.XPATH,using="/html/body/div[1]/aside[1]/div/nav/ul[2]/li[2]/a/span") WebElement customerButtonElement;
-	@FindBy(how=How.XPATH,using="//*@id=\"customers\"]/li[2]/a/span") WebElement addCustomerButtonElement;
+	@FindBy(how=How.XPATH,using="//span[text()='Add Customer']") WebElement addCustomerButtonElement;
 	
 	
 	

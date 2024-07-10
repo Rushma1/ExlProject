@@ -13,17 +13,17 @@ public class AddCustomerPage extends BasePage {
 		this.driver= driver;
 	}
 	
-	@FindBy(how=How.XPATH,using="html/body/div[1]/section/div/div[2]/div/div[1]/div/div/header/div/strong") WebElement addCustomerHeaderElement;
-	@FindBy(how=How.XPATH,using="//*[@id=\"general_company\"]/div[1]/div/input") WebElement fullNameElement;
-	@FindBy(how=How.XPATH,using="//*[@id=\"general_company\"]/div[2]/div/select") WebElement companyDropdownElement;
-	@FindBy(how=How.XPATH,using="//*[@id=\"general_company\"]/div[2]/div/select") WebElement emailElement;		
-	@FindBy(how=How.XPATH,using="//*[@id=\"phone\"]") WebElement phoneElement;
-	@FindBy(how=How.XPATH,using="//*[@id=\"general_company\"]/div[5]/div/input") WebElement addressElement;
-	@FindBy(how=How.XPATH,using="//*[@id=\"general_company\"]/div[6]/div/input") WebElement cityElement;
-	@FindBy(how=How.XPATH,using="//*[@id=\"port\"]") WebElement zipElement;
-	@FindBy(how=How.XPATH,using="//*[@id=\"general_company\"]/div[8]/div[1]/select") WebElement countryDropdownElement;
-	@FindBy(how=How.XPATH,using="//*[@id=\"customer_group\"]") WebElement groupDropdownElement;
-	@FindBy(how=How.XPATH,using="//*[@id=\"save_btn\"]") WebElement saveButtonElement;
+	@FindBy(how=How.XPATH,using="//strong[text()='New Customer']") WebElement addCustomerHeaderElement;
+	@FindBy(how=How.XPATH,using="//input[@name='name']") WebElement fullNameElement;
+	@FindBy(how=How.XPATH,using="//select[@name='company_name']") WebElement companyDropdownElement;
+	@FindBy(how=How.XPATH,using="//input[@name='email']") WebElement emailElement;		
+	@FindBy(how=How.XPATH,using="//input[@id='phone']") WebElement phoneElement;
+	@FindBy(how=How.XPATH,using="//input[@name='address']") WebElement addressElement;
+	@FindBy(how=How.XPATH,using="//input[@name='city']") WebElement cityElement;
+	@FindBy(how=How.XPATH,using="//input[@id='port']") WebElement zipElement;
+	@FindBy(how=How.XPATH,using="//select[@name='country']") WebElement countryDropdownElement;
+	@FindBy(how=How.XPATH,using="//select[@id='customer_group']") WebElement groupDropdownElement;
+	@FindBy(how=How.XPATH,using="//button[@id='save_btn']") WebElement saveButtonElement;
 	
 	
 	public String getAddCustomerPage() {
@@ -68,4 +68,7 @@ public class AddCustomerPage extends BasePage {
 		selectFromDropdown(groupDropdownElement,group);
 	
 	}
+	public void clickSaveButton() {
+		saveButtonElement.click();
 	}
+}
